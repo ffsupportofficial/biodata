@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "SHUVO PK",
-  "short_name": "PK_BIO",
-  "description": "Official Social Bio & Developer Portfolio of ⚡ 乂SHUVO PK 乂 ⚡",
+  "name": "SHUVO PK BIO SITE",
+  "short_name": "PK BIO",
+  "description": "Official Social Bio & Developer Portfolio of SHUVO PK BIO SITE",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
@@ -11,19 +11,19 @@
   "theme_color": "#09090b",
   "icons": [
     {
-      "src": "https://api.telegram.org/file/bot8649772073:AAHvhPRNE5pZmWPN1qU68z0ug3isdP7fNPg/photos/file_0.jpg",
+      "src": "https://img.magnific.com/premium-vector/minimalist-pk-logo-with-dynamic-diagonal-line_997566-11312.jpg?semt=ais_hybrid&w=740&q=80",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "https://api.telegram.org/file/bot8649772073:AAHvhPRNE5pZmWPN1qU68z0ug3isdP7fNPg/photos/file_0.jpg",
+      "src": "https://img.magnific.com/premium-vector/minimalist-pk-logo-with-dynamic-diagonal-line_997566-11312.jpg?semt=ais_hybrid&w=740&q=80",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "https://api.telegram.org/file/bot8649772073:AAHvhPRNE5pZmWPN1qU68z0ug3isdP7fNPg/photos/file_0.jpg",
+      "src": "https://img.magnific.com/premium-vector/minimalist-pk-logo-with-dynamic-diagonal-line_997566-11312.jpg?semt=ais_hybrid&w=740&q=80",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
