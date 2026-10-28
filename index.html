@@ -54,6 +54,48 @@
     .animate-pulse-slow {
       animation: pulseSlow 3s ease-in-out infinite;
     }
+    /* Cyberpunk Neon Theme Rules */
+    [data-theme="cyberpunk_neon"] {
+      background-color: #030712 !important;
+      background-image: radial-gradient(circle at 50% 0%, rgba(34, 211, 238, 0.2), transparent 70%),
+                        linear-gradient(to bottom, rgba(147, 51, 234, 0.15), rgba(3, 7, 18, 0.98)) !important;
+    }
+    [data-theme="cyberpunk_neon"] main {
+      background: #080d1e !important;
+      border: 2px solid rgba(34, 211, 238, 0.8) !important;
+      box-shadow: 0 0 35px rgba(34, 211, 238, 0.35), inset 0 0 25px rgba(147, 51, 234, 0.15) !important;
+      border-radius: 1.5rem !important;
+    }
+    [data-theme="cyberpunk_neon"] .glass-card {
+      background: rgba(12, 19, 44, 0.85) !important;
+      border: 1px solid rgba(34, 211, 238, 0.5) !important;
+      box-shadow: 0 0 20px rgba(34, 211, 238, 0.2), inset 0 0 15px rgba(34, 211, 238, 0.1) !important;
+    }
+    [data-theme="cyberpunk_neon"] .avatar-glow {
+      box-shadow: 0 0 0 3px #080d1e, 0 0 0 6px #22d3ee, 0 0 25px #22d3ee !important;
+    }
+    [data-theme="cyberpunk_neon"] #servicesGrid > div {
+      background: #0b1329 !important;
+      border: 1px solid rgba(34, 211, 238, 0.6) !important;
+      box-shadow: 0 0 15px rgba(34, 211, 238, 0.25) !important;
+    }
+    [data-theme="cyberpunk_neon"] #socialLinksContainer > a {
+      background: rgba(11, 19, 41, 0.9) !important;
+      border: 1px solid rgba(34, 211, 238, 0.4) !important;
+      box-shadow: 0 0 12px rgba(34, 211, 238, 0.15) !important;
+    }
+    [data-theme="cyberpunk_neon"] #contactContainer a:first-child {
+      background: linear-gradient(135deg, #10b981, #34d399) !important;
+      color: #020617 !important;
+      font-weight: 800 !important;
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.4) !important;
+    }
+    [data-theme="cyberpunk_neon"] #contactContainer a:last-child {
+      background: linear-gradient(135deg, #06b6d4, #3b82f6) !important;
+      color: #ffffff !important;
+      font-weight: 800 !important;
+      box-shadow: 0 0 20px rgba(6, 182, 212, 0.4) !important;
+    }
   </style>
 </head>
 <body class="min-h-screen bg-zinc-950 text-zinc-100 flex flex-col items-center selection:bg-cyan-500 selection:text-zinc-950">
@@ -76,7 +118,7 @@
       <!-- Avatar with Live Indicator -->
       <div class="relative mb-3 group">
         <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden avatar-glow bg-zinc-900 border-2 border-cyan-400/50">
-          <img id="profileAvatar" src="https://api.telegram.org/file/bot8649772073:AAHvhPRNE5pZmWPN1qU68z0ug3isdP7fNPg/photos/file_1.jpg" alt="Avatar" class="w-full h-full object-cover" onerror="this.src='https://img.magnific.com/premium-vector/minimalist-pk-logo-with-dynamic-diagonal-line_997566-11312.jpg?semt=ais_hybrid&amp;w=740&amp;q=80'" />
+          <img id="profileAvatar" src="https://api.telegram.org/file/bot8649772073:AAHvhPRNE5pZmWPN1qU68z0ug3isdP7fNPg/photos/file_5.jpg" alt="Avatar" class="w-full h-full object-cover" onerror="this.src='https://img.magnific.com/premium-vector/minimalist-pk-logo-with-dynamic-diagonal-line_997566-11312.jpg?semt=ais_hybrid&amp;w=740&amp;q=80'" />
         </div>
         <div class="absolute -bottom-1 -right-1 bg-emerald-500 text-zinc-950 text-[10px] font-extrabold px-1.5 py-0.5 rounded-full border-2 border-zinc-950 flex items-center gap-1 shadow-lg">
           <span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span>
@@ -225,7 +267,7 @@
     var CLIENT_ID = "c_1793064747711";
     var FIREBASE_URL = "https://biodata-fd087-default-rtdb.asia-southeast1.firebasedatabase.app";
     var cleanFb = "https://biodata-fd087-default-rtdb.asia-southeast1.firebasedatabase.app/clients/c_1793064747711.json";
-    var initialEmbeddedData = {"profile":{"avatarUrl":"https://api.telegram.org/file/bot8649772073:AAHvhPRNE5pZmWPN1qU68z0ug3isdP7fNPg/photos/file_1.jpg","bannerUrl":"https://api.telegram.org/file/bot8649772073:AAHvhPRNE5pZmWPN1qU68z0ug3isdP7fNPg/photos/file_2.jpg","bio":"স্বাগতম আমার অফিসিয়াল বায়ো ডাটা ও প্রোফাইল পেজে! যেকোনো প্রয়োজনে সরাসরি যোগাযোগ করুন।","handle":"@shuvo_pk","location":"Natore ,Bangladesh","name":"⚡ 🌸SHUVO PK 🌸 ⚡","title":"🌟 Profashonal Web & Apps Developer"},"badges":[{"id":"b_1","text":"⚡ Verified Profile"},{"id":"b_2","text":"🔥 Official Creator"},{"id":"b_1793065411347","text":"🔥 Shuvo Official"},{"id":"b_1793065428265","text":"💻 Developer"},{"id":"b_1793065452544","text":"🇧🇩 Bangladesh"}],"services":[{"createdAt":"2026-10-27T04:57:59.491Z","id":"cs_1793077079491","imageUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSytVg-pulYehZEEg6tAHR3-JkNYoNthyMeDHqGlTV8vJDa9y79xd_oHOY&s=10","linkUrl":"https://androadappsdevelopershuvo.github.io/biodata.com/","subtitle":"","title":"আমার মেন সাইট"}],"socialLinks":[{"buttonText":"যুক্ত হোন","enabled":true,"id":"cl_1793065602566","platform":"facebook","subtitle":"অফিসিয়াল ফেসবুক প্রোফাইল","title":"Facebook Profile","url":"https://www.facebook.com/xrhakarshuvo007"},{"buttonText":"যুক্ত হোন","enabled":true,"id":"cl_1793065761850","platform":"telegram","subtitle":"টেলিগ্রাম চ্যানেল","title":"Telegram Channel","url":"https://t.me/shuvo_pk"}],"contact":{"customNote":"যেকোনো প্রজেক্ট, কলাবোরেশন বা প্রয়োজনে সরাসরি মেসেজ দিন।","email":"pkmdshuvo488@gmail.com","enabled":true,"telegramUsername":"","whatsappMessage":"হাই ডেভোলপার শুভ। \nআমি আপনার বায়ো ডাটা সাইট থেকে এসেছি 🫶 \nআমি আপনার বায়ো ডাটা সাইট এর মেম্বার সিপ হতে চাই🌸","whatsappNumber":"+8801921526301"},"layoutStyle":"social_first","updatedAt":"2026-10-27T01:32:27.711Z"};
+    var initialEmbeddedData = {"profile":{"avatarUrl":"https://api.telegram.org/file/bot8649772073:AAHvhPRNE5pZmWPN1qU68z0ug3isdP7fNPg/photos/file_5.jpg","bannerUrl":"https://api.telegram.org/file/bot8649772073:AAHvhPRNE5pZmWPN1qU68z0ug3isdP7fNPg/photos/file_2.jpg","bio":"স্বাগতম আমার অফিসিয়াল বায়ো ডাটা ও প্রোফাইল পেজে! যেকোনো প্রয়োজনে সরাসরি যোগাযোগ করুন।","handle":"@shuvo_pk","location":"Natore ,Bangladesh","name":"⚡ 🌸SHUVO PK 🌸 ⚡","title":"🌟 Profashonal Web & Apps Developer"},"badges":[{"id":"b_1","text":"⚡ Verified Profile"},{"id":"b_2","text":"🔥 Official Creator"},{"id":"b_1793065411347","text":"🔥 Shuvo Official"},{"id":"b_1793065428265","text":"💻 Developer"},{"id":"b_1793065452544","text":"🇧🇩 Bangladesh"}],"services":[{"createdAt":"2026-10-27T04:57:59.491Z","id":"cs_1793077079491","imageUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSytVg-pulYehZEEg6tAHR3-JkNYoNthyMeDHqGlTV8vJDa9y79xd_oHOY&s=10","linkUrl":"https://androadappsdevelopershuvo.github.io/biodata.com/","subtitle":"","title":"আমার মেন সাইট"}],"socialLinks":[{"buttonText":"যুক্ত হোন","enabled":true,"id":"cl_1793065602566","platform":"facebook","subtitle":"অফিসিয়াল ফেসবুক প্রোফাইল","title":"Facebook Profile","url":"https://www.facebook.com/xrhakarshuvo007"},{"buttonText":"যুক্ত হোন","enabled":true,"id":"cl_1793065761850","platform":"telegram","subtitle":"টেলিগ্রাম চ্যানেল","title":"Telegram Channel","url":"https://t.me/shuvo_pk"}],"contact":{"customNote":"যেকোনো প্রজেক্ট, কলাবোরেশন বা প্রয়োজনে সরাসরি মেসেজ দিন।","email":"pkmdshuvo488@gmail.com","enabled":true,"telegramUsername":"","whatsappMessage":"হাই ডেভোলপার শুভ। \nআমি আপনার বায়ো ডাটা সাইট থেকে এসেছি 🫶 \nআমি আপনার বায়ো ডাটা সাইট এর মেম্বার সিপ হতে চাই🌸","whatsappNumber":"+8801921526301"},"layoutStyle":"social_first","updatedAt":"2026-10-27T01:32:27.711Z"};
 
     function showToast(msg) {
       var toast = document.getElementById('toastNotification');
@@ -410,7 +452,12 @@
       var mainEl = document.querySelector('main');
       var glassBg = document.getElementById('glassmorphismMeshBg');
 
-      if (themeClass === 'dark_glassmorphism') {
+      if (themeClass === 'cyberpunk_neon') {
+        if (glassBg) glassBg.style.display = 'none';
+        if (mainEl) {
+          mainEl.className = 'w-full max-w-md mx-auto min-h-screen flex flex-col bg-[#080d1e] border-2 border-cyan-400/90 shadow-[0_0_35px_rgba(34,211,238,0.4)] rounded-3xl relative pb-24 z-10 my-2 overflow-hidden';
+        }
+      } else if (themeClass === 'dark_glassmorphism') {
         if (!glassBg) {
           glassBg = document.createElement('div');
           glassBg.id = 'glassmorphismMeshBg';
