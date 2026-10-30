@@ -651,14 +651,74 @@
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4) !important;
       transform: translateZ(0);
     }
-    [data-theme="ultra_cyber_glass"] #btnShareProfile > div {
-      background: linear-gradient(145deg, rgba(24, 24, 27, 0.9) 0%, rgba(9, 9, 11, 0.9) 100%) !important;
+    /* SHUVOX Lightning Cyber Theme Rules */
+    [data-theme="shuvox_lightning_cyber"],
+    body[data-theme="shuvox_lightning_cyber"] {
+      background-color: #020617 !important;
+      color: #ffffff !important;
+    }
+    [data-theme="shuvox_lightning_cyber"] main,
+    main[data-theme="shuvox_lightning_cyber"] {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+    [data-theme="shuvox_lightning_cyber"] .glass-card,
+    main[data-theme="shuvox_lightning_cyber"] .glass-card {
+      background: rgba(15, 23, 42, 0.7) !important;
+      backdrop-filter: blur(20px) !important;
+      -webkit-backdrop-filter: blur(20px) !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      border-radius: 1.25rem !important;
+      color: #ffffff !important;
+    }
+    [data-theme="shuvox_lightning_cyber"] #socialLinksContainer > a {
+      background: rgba(255, 255, 255, 0.05) !important;
+      backdrop-filter: blur(16px) !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      border-radius: 1rem !important;
+      color: #ffffff !important;
+      transition: all 0.3s ease !important;
+    }
+    [data-theme="shuvox_lightning_cyber"] #socialLinksContainer > a:hover {
+      transform: scale(1.02) !important;
+      background: rgba(255, 255, 255, 0.1) !important;
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.4) !important;
+      border-color: rgba(96, 165, 250, 0.5) !important;
+    }
+    [data-theme="shuvox_lightning_cyber"] #servicesGrid > div {
+      background: rgba(255, 255, 255, 0.05) !important;
+      backdrop-filter: blur(16px) !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      border-radius: 1rem !important;
+      transition: all 0.3s ease !important;
+    }
+    [data-theme="shuvox_lightning_cyber"] #servicesGrid > div:hover {
+      transform: scale(1.04) !important;
+      background: rgba(255, 255, 255, 0.1) !important;
+      box-shadow: 0 0 25px rgba(168, 85, 247, 0.4) !important;
+      border-color: rgba(192, 132, 252, 0.5) !important;
+    }
+    [data-theme="shuvox_lightning_cyber"] #btnShareProfile > div {
+      background: rgba(15, 23, 42, 0.8) !important;
       border: 1px solid rgba(255, 255, 255, 0.12) !important;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
     }
   </style>
 </head>
-<body class="min-h-screen bg-zinc-950 text-zinc-100 flex flex-col items-center selection:bg-cyan-500 selection:text-zinc-950">
+<body class="min-h-screen bg-zinc-950 text-zinc-100 flex flex-col items-center selection:bg-cyan-500 selection:text-zinc-950" data-theme="shuvox_lightning_cyber">
+
+  <!-- Ambient 3D Orbs & Lightning Layers -->
+  <div class="fixed inset-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+    <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-purple-600/40 rounded-full mix-blend-screen filter blur-[120px] animate-blob"></div>
+    <div class="absolute top-[40%] right-[-10%] w-96 h-96 bg-cyan-600/40 rounded-full mix-blend-screen filter blur-[120px] animate-blob" style="animation-delay: 2s;"></div>
+    <div class="absolute bottom-[-20%] left-[20%] w-[500px] h-[500px] bg-blue-600/30 rounded-full mix-blend-screen filter blur-[150px] animate-blob" style="animation-delay: 4s;"></div>
+  </div>
+  <div class="fixed inset-0 w-full h-full z-0 pointer-events-none mix-blend-screen lightning-bg-flash"></div>
+  <div class="fixed top-0 left-[70%] md:left-[80%] -translate-x-1/2 w-32 h-[60vh] z-0 pointer-events-none flex justify-center">
+    <svg class="lightning-bolt-svg w-full h-full text-cyan-300 opacity-0" viewBox="0 0 100 300" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M60 0 L20 120 L50 130 L10 230 L45 220 L25 300 L90 150 L55 160 L85 60 Z" fill="currentColor" />
+    </svg>
+  </div>
 
   <!-- Offline Status Bar Indicator -->
   <div id="offlineIndicator" class="hidden fixed top-0 inset-x-0 bg-amber-500 text-zinc-950 text-xs font-bold py-1 text-center z-50 shadow-md">
@@ -721,18 +781,6 @@
     <!-- Reorderable Sections Container -->
     <div id="contentSections" class="flex flex-col">
       
-      <!-- Section: Services Grid -->
-      <div id="sectionServices" class="px-5 mb-6">
-        <div class="flex items-center justify-between mb-3">
-          <div class="flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
-            <h2 class="text-sm font-bold uppercase tracking-wider text-white">সাভিস ও টুলস সমূহ</h2>
-          </div>
-          <span id="servicesCountBadge" class="text-[11px] font-mono px-2 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-cyan-400 font-bold">লাইভ</span>
-        </div>
-        <div id="servicesGrid" class="grid grid-cols-2 sm:grid-cols-3 gap-2.5"></div>
-      </div>
-
       <!-- Section: Social Links List -->
       <div id="sectionSocial" class="px-5 mb-6">
         <div class="flex items-center justify-between mb-3">
@@ -743,6 +791,18 @@
           <span class="text-[10px] text-zinc-500 font-mono">Connect</span>
         </div>
         <div id="socialLinksContainer" class="flex flex-col gap-2.5"></div>
+      </div>
+
+      <!-- Section: Services Grid -->
+      <div id="sectionServices" class="px-5 mb-6">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+            <h2 class="text-sm font-bold uppercase tracking-wider text-white">সাভিস ও টুলস সমূহ</h2>
+          </div>
+          <span id="servicesCountBadge" class="text-[11px] font-mono px-2 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-cyan-400 font-bold">লাইভ</span>
+        </div>
+        <div id="servicesGrid" class="grid grid-cols-2 sm:grid-cols-3 gap-2.5"></div>
       </div>
       
     </div>
@@ -832,7 +892,7 @@
     var CLIENT_ID = "c_1793064747711";
     var FIREBASE_URL = "https://biodata-fd087-default-rtdb.asia-southeast1.firebasedatabase.app";
     var cleanFb = "https://biodata-fd087-default-rtdb.asia-southeast1.firebasedatabase.app/clients/c_1793064747711.json";
-    var initialEmbeddedData = {"profile":{"avatarUrl":"https://api.telegram.org/file/bot8649772073:AAHvhPRNE5pZmWPN1qU68z0ug3isdP7fNPg/photos/file_5.jpg","bannerUrl":"https://api.telegram.org/file/bot8649772073:AAHvhPRNE5pZmWPN1qU68z0ug3isdP7fNPg/photos/file_10.jpg","bio":"স্বাগতম আমার অফিসিয়াল বায়ো ডাটা ও প্রোফাইল পেজে! যেকোনো প্রয়োজনে সরাসরি যোগাযোগ করুন।","handle":"@shuvo_pk","location":"Natore ,Bangladesh","name":"⚡ 🌸SHUVO PK 🌸 ⚡","title":"🌟 Profashonal Web & Apps Developer"},"badges":[{"id":"b_1","text":"⚡ Verified Profile"},{"id":"b_2","text":"🔥 Official Creator"},{"id":"b_1793065411347","text":"🔥 Shuvo Official"},{"id":"b_1793065428265","text":"💻 Developer"},{"id":"b_1793065452544","text":"🇧🇩 Bangladesh"}],"services":[{"createdAt":"2026-10-27T04:57:59.491Z","id":"cs_1793077079491","imageUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSytVg-pulYehZEEg6tAHR3-JkNYoNthyMeDHqGlTV8vJDa9y79xd_oHOY&s=10","linkUrl":"https://androadappsdevelopershuvo.github.io/biodata.com/","subtitle":"","title":"আমার মেন সাইট"},{"createdAt":"2026-10-28T09:59:53.334Z","id":"cs_1793181593334","imageUrl":"https://api.telegram.org/file/bot8649772073:AAHvhPRNE5pZmWPN1qU68z0ug3isdP7fNPg/photos/file_6.jpg","linkUrl":"https://t.me/djhaker007ff","subtitle":"x","title":"TEST"},{"createdAt":"2026-10-28T10:00:48.968Z","id":"cs_1793181648968","imageUrl":"https://api.telegram.org/file/bot8649772073:AAHvhPRNE5pZmWPN1qU68z0ug3isdP7fNPg/photos/file_7.jpg","linkUrl":"https://ff.com","subtitle":"zx","title":"FREE"},{"createdAt":"2026-10-28T10:01:35.353Z","id":"cs_1793181695353","imageUrl":"https://api.telegram.org/file/bot8649772073:AAHvhPRNE5pZmWPN1qU68z0ug3isdP7fNPg/photos/file_8.jpg","linkUrl":"https://ffsupporthub.com","subtitle":"cv","title":"Cv"},{"createdAt":"2026-10-28T13:39:09.477Z","id":"cs_1793194749477","imageUrl":"https://api.telegram.org/file/bot8649772073:AAHvhPRNE5pZmWPN1qU68z0ug3isdP7fNPg/photos/file_9.jpg","linkUrl":"https://ff.com","subtitle":"🐸","title":"🌸🫶"}],"socialLinks":[{"buttonText":"যুক্ত হোন","enabled":true,"id":"cl_1793065602566","platform":"facebook","subtitle":"অফিসিয়াল ফেসবুক প্রোফাইল","title":"Facebook Profile","url":"https://www.facebook.com/xrhakarshuvo007"},{"buttonText":"যুক্ত হোন","enabled":true,"id":"cl_1793065761850","platform":"telegram","subtitle":"টেলিগ্রাম চ্যানেল","title":"Telegram Channel","url":"https://t.me/shuvo_pk"},{"buttonText":"ফলো করুন","enabled":true,"id":"cl_1793194896264","platform":"instagram","subtitle":"ইনস্টাগ্রাম ফটো ও রিলস","title":"Instagram Profile","url":"https://ff"},{"buttonText":"অ্যাড করুন","enabled":true,"id":"cl_1793195630752","platform":"snapchat","subtitle":"স্ন্যাপ ও স্টোরিজ","title":"Snapchat Profile","url":"https://httpshttps://ff"},{"buttonText":"ফলো করুন","enabled":true,"id":"cl_1793239902412","platform":"tiktok","subtitle":"ভাইরাল শর্ট ভিডিও","title":"TikTok Profile","url":"https://ff"}],"contact":{"customNote":"যেকোনো প্রজেক্ট, কলাবোরেশন বা প্রয়োজনে সরাসরি মেসেজ দিন।","email":"pkmdshuvo488@gmail.com","enabled":true,"telegramUsername":"","whatsappMessage":"হাই ডেভোলপার শুভ। \nআমি আপনার বায়ো ডাটা সাইট থেকে এসেছি 🫶 \nআমি আপনার বায়ো ডাটা সাইট এর মেম্বার সিপ হতে চাই🌸","whatsappNumber":"+8801921526301"},"layoutStyle":"services_first","themeStyle":"dark_glassmorphism","updatedAt":"2026-10-27T01:32:27.711Z"};
+    var initialEmbeddedData = {"profile":{"avatarUrl":"https://api.telegram.org/file/bot8649772073:AAHvhPRNE5pZmWPN1qU68z0ug3isdP7fNPg/photos/file_5.jpg","bannerUrl":"https://api.telegram.org/file/bot8649772073:AAHvhPRNE5pZmWPN1qU68z0ug3isdP7fNPg/photos/file_10.jpg","bio":"স্বাগতম আমার অফিসিয়াল বায়ো ডাটা ও প্রোফাইল পেজে! যেকোনো প্রয়োজনে সরাসরি যোগাযোগ করুন।","handle":"@shuvo_pk","location":"Natore ,Bangladesh","name":"⚡ 🌸SHUVO PK 🌸 ⚡","title":"🌟 Profashonal Web & Apps Developer"},"badges":[{"id":"b_1","text":"⚡ Verified Profile"},{"id":"b_2","text":"🔥 Official Creator"},{"id":"b_1793065411347","text":"🔥 Shuvo Official"},{"id":"b_1793065428265","text":"💻 Developer"},{"id":"b_1793065452544","text":"🇧🇩 Bangladesh"},{"id":"b_1793320932945","text":"🌸❤️‍🔥🫶"}],"services":[{"createdAt":"2026-10-27T04:57:59.491Z","id":"cs_1793077079491","imageUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSytVg-pulYehZEEg6tAHR3-JkNYoNthyMeDHqGlTV8vJDa9y79xd_oHOY&s=10","linkUrl":"https://androadappsdevelopershuvo.github.io/biodata.com/","subtitle":"","title":"আমার মেন সাইট"},{"createdAt":"2026-10-28T09:59:53.334Z","id":"cs_1793181593334","imageUrl":"https://api.telegram.org/file/bot8649772073:AAHvhPRNE5pZmWPN1qU68z0ug3isdP7fNPg/photos/file_6.jpg","linkUrl":"https://t.me/djhaker007ff","subtitle":"x","title":"TEST"},{"createdAt":"2026-10-28T10:00:48.968Z","id":"cs_1793181648968","imageUrl":"https://api.telegram.org/file/bot8649772073:AAHvhPRNE5pZmWPN1qU68z0ug3isdP7fNPg/photos/file_7.jpg","linkUrl":"https://ff.com","subtitle":"zx","title":"FREE"},{"createdAt":"2026-10-28T10:01:35.353Z","id":"cs_1793181695353","imageUrl":"https://api.telegram.org/file/bot8649772073:AAHvhPRNE5pZmWPN1qU68z0ug3isdP7fNPg/photos/file_8.jpg","linkUrl":"https://ffsupporthub.com","subtitle":"cv","title":"Cv"},{"createdAt":"2026-10-28T13:39:09.477Z","id":"cs_1793194749477","imageUrl":"https://api.telegram.org/file/bot8649772073:AAHvhPRNE5pZmWPN1qU68z0ug3isdP7fNPg/photos/file_9.jpg","linkUrl":"https://ff.com","subtitle":"🐸","title":"🌸🫶"}],"socialLinks":[{"buttonText":"যুক্ত হোন","enabled":true,"id":"cl_1793065602566","platform":"facebook","subtitle":"অফিসিয়াল ফেসবুক প্রোফাইল","title":"Facebook Profile","url":"https://www.facebook.com/xrhakarshuvo007"},{"buttonText":"যুক্ত হোন","enabled":true,"id":"cl_1793065761850","platform":"telegram","subtitle":"টেলিগ্রাম চ্যানেল","title":"Telegram Channel","url":"https://t.me/shuvo_pk"},{"buttonText":"ফলো করুন","enabled":true,"id":"cl_1793194896264","platform":"instagram","subtitle":"ইনস্টাগ্রাম ফটো ও রিলস","title":"Instagram Profile","url":"https://ff"},{"buttonText":"অ্যাড করুন","enabled":true,"id":"cl_1793195630752","platform":"snapchat","subtitle":"স্ন্যাপ ও স্টোরিজ","title":"Snapchat Profile","url":"https://httpshttps://ff"},{"buttonText":"ফলো করুন","enabled":true,"id":"cl_1793239902412","platform":"tiktok","subtitle":"ভাইরাল শর্ট ভিডিও","title":"TikTok Profile","url":"https://ff"}],"contact":{"customNote":"যেকোনো প্রজেক্ট, কলাবোরেশন বা প্রয়োজনে সরাসরি মেসেজ দিন।","email":"pkmdshuvo488@gmail.com","enabled":true,"telegramUsername":"","whatsappMessage":"হাই ডেভোলপার শুভ। \nআমি আপনার বায়ো ডাটা সাইট থেকে এসেছি 🫶 \nআমি আপনার বায়ো ডাটা সাইট এর মেম্বার সিপ হতে চাই🌸","whatsappNumber":"+8801921526301"},"layoutStyle":"social_first","themeStyle":"shuvox_lightning_cyber","updatedAt":"2026-10-27T01:32:27.711Z"};
 
     function showToast(msg) {
       var toast = document.getElementById('toastNotification');
